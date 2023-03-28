@@ -80,13 +80,13 @@ export default function Boards() {
           <MagnifyingGlass className="w-5 h-5" />
           <input
             type="text"
-            className="w-full h-12 outline-none"
+            className="w-full h-12 outline-none placeholder:text-sm placeholder:md:text-base"
             placeholder="Busque por cards, assuntos ou responsáveis..."
           />
         </div>
       </section>
       <main className="grid grid-cols-1 lg:grid-cols-w2 xl:grid-cols-w3 gap-12 px-6 justify-between">
-        <div>
+        <div className="">
           <h2 className="py-6 text-xl text-[#403937] font-bold">A fazer</h2>
           <div className="grid gap-6">
             {willGo.map((item) => (

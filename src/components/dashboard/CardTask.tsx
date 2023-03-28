@@ -6,10 +6,13 @@ interface CardTaskProps {
 
 export function CardTask({ title, description, tags }: CardTaskProps) {
   return (
-    <div className="w-[320px] bg-white p-6 rounded-lg space-y-[10px] shadow-md">
+    <div className="lg:w-[320px] bg-white p-6 rounded-lg space-y-[10px] shadow-md">
       <h4 className="text-[#403937] text-sm font-bold">{title}</h4>
-      <p className="text-[#756966] text-sm font-medium">
+      <p className="text-[#756966] text-sm font-medium hidden lg:block">
         {description.slice(0, 68).concat("...")}
+      </p>
+      <p className="text-[#756966] text-sm font-medium relative lg:hidden">
+        {description}
       </p>
 
       <div className="flex gap-2 flex-wrap">
