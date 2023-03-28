@@ -21,6 +21,10 @@ module.exports = {
       backgroundImage: {
         background: "url('/bg.jpg')",
       },
+      gridTemplateColumns: {
+        w3: "repeat(3, minmax(0, 320px))",
+        w2: "repeat(2, minmax(0, 320px))",
+      },
     },
   },
   plugins: [],

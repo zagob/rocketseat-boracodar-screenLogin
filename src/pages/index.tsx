@@ -7,6 +7,7 @@ import { Input } from "@/components/input";
 
 import logo from "../assets/logo.svg";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const titillium_Web = Titillium_Web({
   subsets: ["latin"],
@@ -14,7 +15,12 @@ const titillium_Web = Titillium_Web({
 });
 
 export default function Home() {
+  const { push } = useRouter();
   const [lockOrUnlockPassword, setLockOrUnlockPassword] = useState(false);
+
+  async function handleEntryDash() {
+    await push("/dashboard/boards");
+  }
 
   return (
     <main
@@ -38,7 +44,7 @@ export default function Home() {
             </span>
           </div>
 
-          <form className="grid gap-8">
+          <form className="grid gap-8" onSubmit={handleEntryDash}>
             <div className="grid gap-4 font-bold">
               <label htmlFor="email" className="grid gap-2 font-semibold">
                 E-mail
